@@ -1,8 +1,8 @@
 <?php
 
-namespace Bastinald\LaravelLivewireModals\Providers;
+namespace greenskies\LaravelLivewireModals\Providers;
 
-use Bastinald\LaravelLivewireModals\Components\Modals;
+use greenskies\LaravelLivewireModals\Components\Modals;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 

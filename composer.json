@@ -6,23 +6,23 @@
     "authors": [
         {
             "name": "Kevin Dion",
-            "email": "bastinald@icloud.com",
+            "email": "greenskies@icloud.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^10.0",
         "livewire/livewire": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "Bastinald\\LaravelLivewireModals\\": "src"
+            "greenskies\\LaravelLivewireModals\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bastinald\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
+                "greenskies\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
             ]
         }
     }
