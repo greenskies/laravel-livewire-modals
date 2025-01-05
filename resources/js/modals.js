@@ -1,4 +1,4 @@
-Copyimport { Modal } from 'bootstrap';
+import { Modal } from 'bootstrap';
 
 let modalsElement = document.getElementById('laravel-livewire-modals');
 

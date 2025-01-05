@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class Modal extends Component
+class Modals extends Component
 {
     public $alias;
     public $params = [];
