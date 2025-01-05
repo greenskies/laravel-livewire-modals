@@ -32,6 +32,6 @@ class Modals extends Component
 
     public function render()
     {
-        return view('livewire.modal');
+        return view('livewire.modals');
     }
 }
