@@ -4,7 +4,7 @@ namespace greenskies\LaravelLivewireModals\Providers;
 
 use greenskies\LaravelLivewireModals\Components\Modals;
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
+use Livewire\LivewireManager;
 
 class LaravelLivewireModalsProvider extends ServiceProvider
 {
@@ -12,11 +12,15 @@ class LaravelLivewireModalsProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'laravel-livewire-modals');
 
-        $this->publishes(
-            [__DIR__ . '/../../resources/views' => resource_path('views/vendor/laravel-livewire-modals')],
-            ['laravel-livewire-modals', 'laravel-livewire-modals:views']
-        );
+        $this->publishes([
+            __DIR__ . '/../../resources/views' => resource_path('views/vendor/laravel-livewire-modals')
+        ], ['laravel-livewire-modals', 'laravel-livewire-modals:views']);
 
-        Livewire::component('modals', Modals::class);
+        $this->app->call([$this, 'registerLivewireComponents']);
+    }
+
+    public function registerLivewireComponents(LivewireManager $livewire)
+    {
+        $livewire->component('modals', Modals::class);
     }
 }
